@@ -1,0 +1,181 @@
+
+/* Add font files for Jaldi */
+@font-face {
+  font-family: 'Jaldi';
+  src: url('fonts/jaldi.woff2') format('woff2'),
+       url('fonts/jaldi.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Add font files for League Spartan */
+@font-face {
+  font-family: 'League Spartan';
+  src: url('fonts/league-spartan.woff2') format('woff2'),
+       url('fonts/league-spartan.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+:root {
+  --font-family-jaldi: 'Jaldi', sans-serif;
+  --font-family-league-spartan: 'League Spartan', sans-serif;
+  --text-black: rgba(0, 0, 0, 1);
+  --text-white: rgba(255, 255, 255, 1);
+}
+
+.text-black {
+  color: var(--text-black);
+}
+
+.text-white {
+  color: var(--text-white);
+}
+
+
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.rectangle-1-2 {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 25px;
+}
+
+.rectangle-2-3 {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.5);
+  background-color: rgba(0, 166, 255, 1);
+  border-radius: 50px;
+}
+
+.text-4 {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  font-family: var(--font-family-jaldi);
+  font-weight: normal;
+  font-size: 40px;
+  text-decoration: none;
+  text-transform: none;
+  color: var(--text-black);
+}
+
+.text-5 {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.5);
+  font-family: var(--font-family-jaldi);
+  font-weight: 700;
+  font-size: 48px;
+  text-decoration: none;
+  text-transform: none;
+  color: var(--text-white);
+}
+
+.text-6 {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  font-family: var(--font-family-jaldi);
+  font-weight: 700;
+  font-size: 128px;
+  text-decoration: none;
+  text-transform: none;
+  color: var(--text-black);
+}
+
+.text-7 {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  font-family: var(--font-family-league-spartan);
+  font-weight: normal;
+  font-size: 48px;
+  text-decoration: none;
+  text-transform: none;
+  color: var(--text-black);
+}
+
+.cuteelephant-1-8 {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  border-radius: 25px;
+  width: 100%;
+  height: auto;
+}
+
+.ellipse-1-10 {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  fill: rgba(0, 166, 255, 1);
+  border: none;
+  outline: none;
+}
+
+.rectangle-3-11 {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  background-color: rgba(0, 0, 0, 1);
+  border-radius: 25px;
+}
+
+.group-1-9 {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+}
+
+.text-12 {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  font-family: var(--font-family-jaldi);
+  font-weight: 700;
+  font-size: 48px;
+  text-decoration: none;
+  text-transform: none;
+  color: var(--text-black);
+}
+
+.slide-16-9-1-1 {
+@media (max-width: 1440px) {
+  .slide-16-9-1-1 {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .slide-16-9-1-1 {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  background-color: rgba(0, 0, 0, 1);
+}
