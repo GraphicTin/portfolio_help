@@ -129,6 +129,5 @@ img {
 }
   flex-grow: 0;
   flex-shrink: 1;
-  width: NaN%;
   background-color: rgba(255, 255, 255, 1);
 }
