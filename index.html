@@ -1,26 +1,129 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <base href="https://graphictin.github.io/portfolio_help/" />
-  <title>Exported Figma Design</title>
-  
-  <link rel="stylesheet" type="text/css" href="styles.css">
+  <title>Generated Page</title>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio Events</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sen:wght@400&family=Sigmar+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="global.css">
+  <style id="sections-styles">
+/* CSS for section section:Hero */
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    padding: 74px 20px 50px;
+    box-sizing: border-box;
+  }
+
+  .hero-container {
+    max-width: 1760px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-title {
+    font-family: 'Sigmar One', cursive;
+    font-weight: 400;
+    font-size: 128px;
+    line-height: 209.66px;
+    color: #000000;
+    margin: 0;
+  }
+
+  .hero-subtitle {
+    font-family: 'Sigmar One', cursive;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 78.62px;
+    color: #000000;
+    margin: 0;
+    margin-top: -26px; /* Calculated from bounding boxes: top(258) - bottom of title(74+210=284) = -26px */
+  }
+
+  .hero-subtitle .highlight {
+    color: #008CFF; /* Approximated from Figma data r:0, g:0.55, b:1 */
+    text-decoration: underline;
+  }
+
+  .hero-caption {
+    font-family: 'Sen', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28.88px;
+    color: #000000;
+    margin: 0;
+    margin-top: 0; /* Calculated from bounding boxes: top(337) - bottom of subtitle(258+79=337) = 0px */
+  }
+
+  .hero-image {
+    width: 774px;
+    height: 502px;
+    margin-top: 53px; /* Calculated from bounding boxes: top(419) - bottom of caption(337+29=366) = 53px */
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  /* Responsive Styles */
+  @media (max-width: 1200px) {
+    .hero-title {
+      font-size: 8vw;
+      line-height: 1.5;
+    }
+    .hero-subtitle {
+      font-size: 3.5vw;
+      line-height: 1.5;
+      margin-top: -1vw;
+    }
+    .hero-caption {
+      font-size: 2vw;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .hero-section {
+      padding-top: 40px;
+    }
+    .hero-title {
+      font-size: 12vw;
+      line-height: 1.4;
+    }
+    .hero-subtitle {
+      font-size: 5.5vw;
+      line-height: 1.4;
+      margin-top: -2vw;
+    }
+    .hero-caption {
+      font-size: 3.5vw;
+    }
+    .hero-image {
+      margin-top: 30px;
+    }
+  }
+  </style>
+  <script src="global.js" defer></script>
 </head>
 <body>
-
-  <section id="hero" class="hero-section">
+<section id="hero" class="hero-section">
   <div class="hero-container">
     <h1 class="hero-title">We help you</h1>
     <p class="hero-subtitle">
       find events for your <span class="highlight">portfolio </span>!
     </p>
     <p class="hero-caption">help student for portfolio web project 5/11</p>
-    <img class="hero-image" src="images/banzai_school.png" alt="Illustration of four happy students in uniform with their arms raised.">
+    <img class="hero-image" src="images/5645781e77a9dd75c25ae979dcf36d0dd45eb410.png" alt="Illustration of four happy students in uniform with their arms raised.">
   </div>
 </section>
-
 </body>
 </html>
