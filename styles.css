@@ -1,133 +1,106 @@
-
-/* Add font files for Sigmar One */
-@font-face {
-  font-family: 'Sigmar One';
-  src: url('fonts/sigmar-one.woff2') format('woff2'),
-       url('fonts/sigmar-one.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
-/* Add font files for Sen */
-@font-face {
-  font-family: 'Sen';
-  src: url('fonts/sen.woff2') format('woff2'),
-       url('fonts/sen.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-:root {
-  --font-family-sigmar-one: 'Sigmar One', sans-serif;
-  --font-family-sen: 'Sen', sans-serif;
-  --text-black: rgba(0, 0, 0, 1);
-}
-
-.text-black {
-  color: var(--text-black);
-}
-
-
-/* CSS Reset */
-* {
+body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  background-color: #ffffff;
+  font-family: 'Sen', sans-serif;
 }
 
-body {
-  width: 100%;
-  min-height: 100vh;
-  overflow-x: hidden;
-}
 
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-.insetboundary-3 {
-  flex-grow: 0;
-  flex-shrink: 1;
-  flex-basis: auto;
-}
-
-.text-4 {
-  flex-grow: 0;
-  flex-shrink: 1;
-  flex-basis: auto;
-  font-family: var(--font-family-sigmar-one);
-  font-weight: normal;
-  font-size: 128px;
-  text-decoration: none;
-  text-transform: none;
-  color: var(--text-black);
-}
-
-.text-5 {
-  flex-grow: 0;
-  flex-shrink: 1;
-  flex-basis: auto;
-  font-family: var(--font-family-sigmar-one);
-  font-weight: normal;
-  font-size: 48px;
-  text-decoration: none;
-  text-transform: none;
-  color: var(--text-black);
-  font-family: var(--font-family-sigmar-one);
-  font-weight: normal;
-  font-size: 48px;
-  text-decoration: underline;
-  text-transform: none;
-  color: var(--text-black);
-  font-family: var(--font-family-sigmar-one);
-  font-weight: normal;
-  font-size: 48px;
-  text-decoration: none;
-  text-transform: none;
-  color: var(--text-black);
-}
-
-.banzai_school-1-6 {
-  flex-grow: 0;
-  flex-shrink: 1;
-  flex-basis: auto;
-  width: 100%;
-  height: auto;
-}
-
-.text-7 {
-  flex-grow: 0;
-  flex-shrink: 1;
-  flex-basis: auto;
-  font-family: var(--font-family-sen);
-  font-weight: normal;
-  font-size: 24px;
-  text-decoration: none;
-  text-transform: none;
-  color: var(--text-black);
-}
-
-.group-1-2 {
-  flex-grow: 0;
-  flex-shrink: 1;
-  flex-basis: auto;
-}
-
-.home-1 {
-@media (max-width: 1440px) {
-  .home-1 {
-    padding-left: 24px;
-    padding-right: 24px;
+  .hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    padding: 74px 20px 50px;
+    box-sizing: border-box;
   }
-}
 
-@media (max-width: 768px) {
-  .home-1 {
-    padding-left: 16px;
-    padding-right: 16px;
+  .hero-container {
+    max-width: 1760px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
-}
-  flex-grow: 0;
-  flex-shrink: 1;
-  background-color: rgba(255, 255, 255, 1);
-}
+
+  .hero-title {
+    font-family: 'Sigmar One', cursive;
+    font-weight: 400;
+    font-size: 128px;
+    line-height: 209.66px;
+    color: #000000;
+    margin: 0;
+  }
+
+  .hero-subtitle {
+    font-family: 'Sigmar One', cursive;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 78.62px;
+    color: #000000;
+    margin: 0;
+    margin-top: -26px; /* Calculated from bounding boxes: top(258) - bottom of title(74+210=284) = -26px */
+  }
+
+  .hero-subtitle .highlight {
+    color: #008CFF; /* Approximated from Figma data r:0, g:0.55, b:1 */
+    text-decoration: underline;
+  }
+
+  .hero-caption {
+    font-family: 'Sen', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28.88px;
+    color: #000000;
+    margin: 0;
+    margin-top: 0; /* Calculated from bounding boxes: top(337) - bottom of subtitle(258+79=337) = 0px */
+  }
+
+  .hero-image {
+    width: 774px;
+    height: 502px;
+    margin-top: 53px; /* Calculated from bounding boxes: top(419) - bottom of caption(337+29=366) = 53px */
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  /* Responsive Styles */
+  @media (max-width: 1200px) {
+    .hero-title {
+      font-size: 8vw;
+      line-height: 1.5;
+    }
+    .hero-subtitle {
+      font-size: 3.5vw;
+      line-height: 1.5;
+      margin-top: -1vw;
+    }
+    .hero-caption {
+      font-size: 2vw;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .hero-section {
+      padding-top: 40px;
+    }
+    .hero-title {
+      font-size: 12vw;
+      line-height: 1.4;
+    }
+    .hero-subtitle {
+      font-size: 5.5vw;
+      line-height: 1.4;
+      margin-top: -2vw;
+    }
+    .hero-caption {
+      font-size: 3.5vw;
+    }
+    .hero-image {
+      margin-top: 30px;
+    }
+  }
