@@ -9,6 +9,31 @@
             background-color: #f4f4f9;
         }
 
+        /* Styles for the button container */
+        #source-link {
+            max-width: 900px;
+            margin: 20px auto; /* Adds margin below the button */
+            text-align: right; /* Aligns the button to the right */
+        }
+
+        /* Styling for the button */
+        .source-button {
+            padding: 10px 15px;
+            background-color: #007bff; /* Primary blue color */
+            color: white;
+            text-decoration: none; /* Removes underline from link */
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            border: none;
+            cursor: pointer;
+            display: inline-block; /* Allows padding and styling */
+        }
+
+        .source-button:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+
         /* Container for the product list */
         #data-container {
             max-width: 900px;
@@ -61,6 +86,15 @@
 <body>
 
     <h2>Product Catalog</h2>
+
+    <div id="source-link">
+        <a href="https://docs.google.com/spreadsheets/d/1_FJ45DXzhzYm7A09SOfXkK2sBgUsmkk5TUvdp8JshGo/edit?gid=0#gid=0" 
+           target="_blank" 
+           class="source-button">
+            View Data Source 📊
+        </a>
+    </div>
+
     <div id="data-container">
         Loading data...
     </div>
