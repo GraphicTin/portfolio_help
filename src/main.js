@@ -1,0 +1,35 @@
+import { createApp } from 'vue'
+import './style.css'
+import App from './App.vue'
+
+
+import primevue from 'primevue/config';
+import ToastService from 'primevue/toastservice';
+
+import customPreset from './mytheme.js';
+import aura from '@primevue/themes/aura';
+
+
+const app = createApp(App);
+
+app.use(primevue, {
+    theme: {
+        preset: customPreset,
+        options: {
+            darkModeSelector: '.my-app-dark',
+            cssLayer: {
+                name: 'primevue',
+                order: 'theme, base, primevue'
+            },
+        },
+    },
+    unstyled: false,
+    ripple: true,
+});
+app.use(ToastService);
+
+
+app.mount('#app')
+
+
+

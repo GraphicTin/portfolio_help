@@ -1,0 +1,53 @@
+
+
+@import 'primeicons/primeicons.css';
+
+@import "tailwindcss";
+
+
+
+
+
+:root.my-app-dark {
+    --card-bg: var(--p-surface-900);
+}
+
+:root {
+    --card-bg: var(--p-surface-0);
+    --card-border: var(--p-surface-300);
+}
+
+
+.card {
+
+    border: 1px solid var(--card-border);
+    border-radius: 1em;
+    padding: 2em;
+
+    background-color: var(--card-bg);
+    scroll-snap-align: center;
+    scroll-snap-type: y mandatory;
+}
+
+.interested {
+
+    /* Background: Light Orange 50 */
+    background-color: var(--p-interest-50); 
+    
+    /* Border: Mid-tone Orange 500 */
+    border: 1px solid var(--p-interest-500);
+    
+    /* Text: Darkest Orange 950 */
+    color: var(--p-interest-950); 
+    
+    border-radius: 1em;
+    padding: 1em;
+}
+
+/* #section2 {
+    background-color: #ddd;
+    } */
+/* * {
+    transition-duration: 5s;
+
+} */
