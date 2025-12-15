@@ -23,9 +23,9 @@ function injectGlobalAppStyles() {
 
             transition: background-color 1s, color 1s;
 
-            min-height: 100vh;
+            min-height: 100dvh;
+            
         }
-
 
         :root {
 
@@ -35,7 +35,7 @@ function injectGlobalAppStyles() {
 
         :root.my-app-dark {
 
-            --app-bg: var(--p-surface-900);
+            --app-bg: var(--p-surface-500);
         }
     `;
 
