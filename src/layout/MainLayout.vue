@@ -1,6 +1,6 @@
 <template>
 
-    <main class="">
+    <main class=" sm">
         <slot></slot>
     </main>
 
@@ -11,9 +11,14 @@
     main {
 
         width: calc(100% - 64px);
-        top: 32px;
-        position: relative;
         margin-inline: auto;
+    }
+
+    @media (width >= 40rem /* 640px */) {
+        main {
+            width: calc(100% - 512px);
+        }
+        
     }
 
 </style>
