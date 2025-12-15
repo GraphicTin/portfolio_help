@@ -35,7 +35,7 @@ function injectGlobalAppStyles() {
 
         :root.my-app-dark {
 
-            --app-bg: var(--p-surface-500);
+            --app-bg: var(--p-surface-900);
         }
     `;
 
