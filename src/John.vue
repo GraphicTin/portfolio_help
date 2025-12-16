@@ -1,15 +1,62 @@
 <template>
-	<RouterView></RouterView>
+	
+	<Topper class="">
+		
+		<Button @click="changeMode()" class="flex h-full w-full rounded-t-none border-t-0">
+            <p>
+                {{ useLocalStorage('theme') }} mode
+            </p>
+        </Button>
+		
+	</Topper>
+
+    <Spacer/>
+	
+	<MainLayout>
+		
+		<!-- <Header class="border border-b-slate-500"/> -->
+        <Spacer/>
+        <MainButtonPool>
+
+			<!-- <Button style="grid-area: item1;" class="h-full w-full bg-amber-400 rounded-md border "></Button> -->
+			<!-- <MainPoolButton @click="changeMode()" ></MainPoolButton>
+			<MainPoolButton ></MainPoolButton>
+			<MainPoolButton ></MainPoolButton>
+			<MainPoolButton ></MainPoolButton> -->
+			<!-- <Button style="grid-area: item2;" class="h-full w-full bg-blue-400  rounded-md border "></Button>
+			<Button style="grid-area: item3;" class="h-full w-full bg-red-400   rounded-md border "></Button>
+			<Button style="grid-area: item4;" class="h-full w-full bg-green-400 rounded-md border "></Button> -->
+
+        </MainButtonPool>
+
+        <Spacer/>
+        <Spacer/>
+        <Spacer/>   
+        <p class="flex justify-center">help student for portfolio  web project  5/11</p>
+		<div id="app">
+			<button id="gettingStarted">Getting started</button>
+		</div>
+        
+		
+	</MainLayout>
+	
 </template>
 
 <script setup>
 	
-
+	// import rawContent from './assets/lorem.txt?raw';
+	// const lorem = ref(rawContent);
+	
+	// // const app = ref(document.body);
+	// // const isLocked = useScrollLock(app);
+	// // isLocked.value = true;
+	
+	// const heading = ref(null);
+	// let headingChars = null;
+	// let headingTimeLine = gsap.timeline({ repeat: -1, repeatDelay: 2, });
+	
+	// const isDarkTheme = ref(false);
 	const darkClassName = 'my-app-dark';
-
-	const router = useRouter();
-
-
 	// let primaryColor = null;
 	
 	// const toast = useToast();
@@ -39,8 +86,21 @@
 	
 	
 	onMounted(() => {
-	    router.push('/index')
+	    useLocalStorage('theme', 'dark').value == 'dark'
+	        ? document.documentElement.classList.add(darkClassName) 
+	        : document.documentElement.classList.remove(darkClassName);
+	
+	    // handleAnimation();
 	});
+
+    function changeMode() {
+        document.documentElement.classList.toggle('my-app-dark');
+        useLocalStorage('theme').value = (
+            document.documentElement.classList.contains('my-app-dark') 
+                ? 'dark' 
+                : 'light' 
+        );
+    }
 
 	
 	// function buildHeadingTimeLine() {
@@ -140,10 +200,5 @@
     import Spacer from './layout/Spacer.vue';
     import MainButtonPool from './layout/MainButtonPool.vue';
 	import MainPoolButton from './components/MainPoolButton.vue';
-
-
-	import { RouterLink } from 'vue-router';
-	import { RouterView } from 'vue-router';
-	import { useRouter }  from 'vue-router'
 	
 </script>
