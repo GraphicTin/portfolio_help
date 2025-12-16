@@ -1,11 +1,6 @@
 import { createApp } from 'vue'
 import './style.css'
 import App from './App.vue'
-import Index from "./views/Index.vue";
-import John from "./views/John.vue";
-import Openhouse from './views/Openhouse.vue';
-
-
 
 
 
@@ -13,7 +8,7 @@ import primevue from 'primevue/config';
 import ToastService from 'primevue/toastservice';
 
 import customPreset from './mytheme.js';
-import aura from '@primevue/themes/aura';
+// import aura from '@primevue/themes/aura';
 
 
 const app = createApp(App);
