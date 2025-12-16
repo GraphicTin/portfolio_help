@@ -1,0 +1,1 @@
+import{c as e,d as t,i as n}from"./index-BeLSMPlN.js";var r={},i={class:`w-full h-full bg-amber-400`};function a(n,r){return t(),e(`div`,i)}var o=n(r,[[`render`,a]]);export{o as default};

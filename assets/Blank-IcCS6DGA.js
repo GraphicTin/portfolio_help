@@ -1,1 +1,0 @@
-import{a as e,u as t}from"./index-CdE6SpTn.js";import{t as n}from"./_plugin-vue_export-helper-CS_Jz9bW.js";var r={},i={class:`w-full h-full bg-amber-400`};function a(n,r){return t(),e(`div`,i)}var o=n(r,[[`render`,a]]);export{o as default};
