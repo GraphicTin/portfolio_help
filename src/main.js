@@ -1,6 +1,7 @@
 import { createApp } from 'vue'
 import './style.css'
 import App from './App.vue'
+import Index from './views/Index.vue';
 
 
 const app = createApp(App);
@@ -19,7 +20,7 @@ const routes = [
         // but often /index redirects to /. I'll keep it for now.
         path: '/index',
         name: 'Index', 
-        component: () => import('@/views/Index.vue') 
+        component: Index
     },
     { 
         path: '/openhouse', 
