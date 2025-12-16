@@ -39,7 +39,7 @@
 
 <script setup>
 
-	const darkClassName = 'my-app-dark';
+	const darkClassName = 'theme-dark';
     const router = useRouter();
 
 	
@@ -52,9 +52,9 @@
 	});
 
     function changeMode() {
-        document.documentElement.classList.toggle('my-app-dark');
+        document.documentElement.classList.toggle(darkClassName);
         useLocalStorage('theme').value = (
-            document.documentElement.classList.contains('my-app-dark') 
+            document.documentElement.classList.contains(darkClassName) 
                 ? 'dark' 
                 : 'light' 
         );
@@ -68,20 +68,19 @@
 	
 	import { ref, onMounted } from 'vue';
 
-	import Button  from 'primevue/button';
-
 	
 	import { useLocalStorage } from '@vueuse/core';
 
 
-
-	import Header from '@/components/Header.vue';
+	import Header     from '@/components/Header.vue';
 	import MainLayout from '@/layout/MainLayout.vue';
-	import Topper from '@/layout/Topper.vue';
-    import Spacer from '@/layout/Spacer.vue';
+	import Topper     from '@/layout/Topper.vue';
+    import Spacer     from '@/layout/Spacer.vue';
     import MainButtonPool from '@/layout/MainButtonPool.vue';
 	import MainPoolButton from '@/components/MainPoolButton.vue';
 
     import { useRouter  } from 'vue-router';
+
+	import Button from '@/components/Button.vue';
 	
 </script>

@@ -1,8 +1,8 @@
 <template>
 
-    <Button variant="outlined" class="h-full w-full rounded-md border main-pool-button">
+    <div variant="outlined" class="h-full w-full rounded-md border main-pool-button">
         <slot></slot>
-    </Button>
+    </div>
 
 </template>
 

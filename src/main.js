@@ -30,26 +30,27 @@ const app = createApp(App);
 // app.use(ToastService);
 
 
-
-
-
 import { createRouter, createWebHistory } from 'vue-router';
 
 const routes = [
     { 
         path: '/', 
-        component: () => import('@/views/Blank.vue')
+        component: () => import('@/views/Index.vue')
     },
     { 
         // ⚠️ RECOMMENDATION: Change the path name to something more descriptive if needed,
         // but often /index redirects to /. I'll keep it for now.
         path: '/index', 
-        component: () => import('@/views/Blank.vue') 
+        component: () => import('@/views/Index.vue') 
     },
     { 
         path: '/openhouse', 
-        component: () => import('@/views/Blank.vue')
+        component: () => import('@/views/Openhouse.vue')
     },
+    {
+        path: '/blank',
+        component: () => import('@/views/Blank.vue')
+    }
     // {
     //     path: '/',
     //     component: () => import('@/views/Blank.vue')
