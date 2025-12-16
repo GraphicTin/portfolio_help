@@ -49,7 +49,11 @@ const routes = [
     { 
         path: '/openhouse', 
         component: () => import('@/views/Openhouse.vue')
-    }
+    },
+    // {
+    //     path: '/',
+    //     component: () => import('@/views/Blank.vue')
+    // }
 
 ];
 

@@ -6,9 +6,9 @@
 
 	const router = useRouter();
 	
-	onMounted(() => {
-	    router.push('/index')
-	});
+	// onMounted(() => {
+	//     router.push('/index')
+	// });
 
 	import { ref, onMounted } from 'vue';
 
