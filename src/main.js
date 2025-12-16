@@ -43,23 +43,25 @@ import { createRouter, createWebHistory } from 'vue-router';
 const routes = [
     { 
         path: '/', 
-        component: App 
+        component: () => import('@/views/Index.vue')
     },
     { 
+        // ⚠️ RECOMMENDATION: Change the path name to something more descriptive if needed,
+        // but often /index redirects to /. I'll keep it for now.
         path: '/index', 
-        component: Index 
+        component: () => import('@/views/Index.vue') 
     },
     { 
         path: '/openhouse', 
-        component: Openhouse 
+        component: () => import('@/views/Openhouse.vue')
     }
 
-]
+];
 
 const router = createRouter({
     history: createWebHistory('/portfolio_help/'),
     routes,
-})
+});
 
 app.use(router);
 
