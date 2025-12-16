@@ -1,6 +1,6 @@
 <template>
 
-    <div class="topper rounded-b-sm ">
+    <div class="topper rounded-b-md ">
         <slot></slot>
 
     </div>
@@ -21,7 +21,7 @@
 
     }
 
-        @media (width >= 40rem /* 640px */) {
+    @media (width >= 40rem /* 640px */) {
         .topper {
             width: calc(100% - 512px);
         }

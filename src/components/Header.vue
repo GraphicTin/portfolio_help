@@ -2,7 +2,7 @@
 
 
 
-    <img src="../assets/header.jpeg" class=" rounded-sm" >   
+    <img src="../assets/header.jpeg" class=" rounded-md" >   
 
 
 
