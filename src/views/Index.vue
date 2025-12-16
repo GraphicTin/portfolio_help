@@ -194,14 +194,14 @@
 	
 	import PrimeVueLogo from '@/assets/primevue-logo.png';
 	import TailwindCssLogo from '@/assets/tailwindcss-logo.png';
-	import MainButton from "./components/template/MainButton.vue";
-	// import NavigationBar from "./components/NavigationBar.vue";
-	import Header from './components/Header.vue';
-	import MainLayout from './layout/MainLayout.vue';
-	import Topper from './layout/Topper.vue';
-    import Spacer from './layout/Spacer.vue';
-    import MainButtonPool from './layout/MainButtonPool.vue';
-	import MainPoolButton from './components/MainPoolButton.vue';
+	import MainButton from "@/components/template/MainButton.vue";
+	// import NavigationBar from "@/components/NavigationBar.vue";
+	import Header from '@/components/Header.vue';
+	import MainLayout from '@/layout/MainLayout.vue';
+	import Topper from '@/layout/Topper.vue';
+    import Spacer from '@/layout/Spacer.vue';
+    import MainButtonPool from '@/layout/MainButtonPool.vue';
+	import MainPoolButton from '@/components/MainPoolButton.vue';
 
 
 	import { RouterLink } from 'vue-router';

@@ -36,8 +36,8 @@
 </template> 
 
 <script setup>  
-    import Topper from './layout/Topper.vue';
-    import Spacer from './layout/Spacer.vue';
+    import Topper from '@/layout/Topper.vue';
+    import Spacer from '@/layout/Spacer.vue';
     import Button  from 'primevue/button';
     import { useLocalStorage } from '@vueuse/core'
     import { ref } from 'vue'; 
@@ -45,7 +45,7 @@
     import { onMounted } from 'vue'; // Added for initial data load example
 
     // 1. IMPORT THE COMPOSABLE
-    import { useSheetData } from '../utils/useSheetData'; 
+    import { useSheetData } from '@/utils/useSheetData'; 
 
     // 2. CALL THE COMPOSABLE TO GET ALL STATE AND METHODS IN ONE OBJECT
     const sheet = useSheetData();
