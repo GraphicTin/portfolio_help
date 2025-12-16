@@ -38,17 +38,17 @@ import { createRouter, createWebHistory } from 'vue-router';
 const routes = [
     { 
         path: '/', 
-        component: () => import('@/views/Index.vue')
+        component: () => import('@/views/Blank.vue')
     },
     { 
         // ⚠️ RECOMMENDATION: Change the path name to something more descriptive if needed,
         // but often /index redirects to /. I'll keep it for now.
         path: '/index', 
-        component: () => import('@/views/Index.vue') 
+        component: () => import('@/views/Blank.vue') 
     },
     { 
         path: '/openhouse', 
-        component: () => import('@/views/Openhouse.vue')
+        component: () => import('@/views/Blank.vue')
     },
     // {
     //     path: '/',
@@ -68,7 +68,7 @@ app.use(router);
 
 
 
-app.mount('#app')
+app.mount('#app');
 
 
 
