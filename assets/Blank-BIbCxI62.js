@@ -1,0 +1,1 @@
+import{a as r,u as e}from"./index-ZjM0BFRb.js";import{t as a}from"./_plugin-vue_export-helper-QjhXK4YL.js";var l={class:"w-full h-full bg-amber-400"};var s=a({},[["render",function(a,s){return e(),r("div",l)}]]);export{s as default};
