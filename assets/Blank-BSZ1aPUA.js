@@ -1,0 +1,1 @@
+import{d as e,o as t}from"./index-TvshT_9r.js";import{t as n}from"./_plugin-vue_export-helper-9n1O4nl6.js";var r={},i={class:`w-full h-full bg-amber-400`};function a(n,r){return e(),t(`div`,i)}var o=n(r,[[`render`,a]]);export{o as default};
