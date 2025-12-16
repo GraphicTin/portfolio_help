@@ -1,0 +1,1 @@
+import{n as r,t}from"./index-Pg1EKhnN.js";var n={class:"w-full h-full bg-amber-400"};var s=((r,t)=>{const n=r.__vccOpts||r;for(const[s,a]of t)n[s]=a;return n})({},[["render",function(s,a){return r(),t("div",n)}]]);export{s as default};
