@@ -9,14 +9,16 @@ const app = createApp(App);
 import { createRouter, createWebHistory } from 'vue-router';
 
 const routes = [
-    { 
-        path: '/', 
-        component: () => import('@/App.vue')
+    {
+        path: '/',
+        // 🔑 Redirect the root path to the named 'Index' route
+        redirect: { name: 'Index' } 
     },
     { 
         // ⚠️ RECOMMENDATION: Change the path name to something more descriptive if needed,
         // but often /index redirects to /. I'll keep it for now.
-        path: '/index', 
+        path: '/index',
+        name: 'Index', 
         component: () => import('@/views/Index.vue') 
     },
     { 
