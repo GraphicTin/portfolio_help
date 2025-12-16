@@ -1,9 +1,6 @@
 import { createApp } from 'vue'
 import './style.css'
 import App from './App.vue'
-import Index from "./Index.vue";
-import John from "./John.vue";
-import Openhouse from './Openhouse.vue';
 
 
 
@@ -40,18 +37,26 @@ app.use(ToastService);
 
 import { createRouter, createWebHistory } from 'vue-router';
 
-const routes = [
-    { path: '/', component: App },
-    { path: '/index', component: Index },
-    { path: '/openhouse', component: Openhouse },
-    { path: '/john', component: John },
+const VITE_BASE_PATH = '/portfolio_help/';
 
-]
+const routes = [
+    {
+        path: '/', // Your root route, which will become /portfolio_help/
+        name: 'Index',
+        component: () => import('@/views/Index.vue'),
+    },
+    {
+        path: '/openhouse', // This route will be accessible at /portfolio_help/about
+        name: 'Openhouse',
+        component: () => import('@/views/Openhouse.vue'),
+    },
+    // ... other routes
+];
 
 const router = createRouter({
-    history: createWebHistory('/portfolio_help/'),
+    history: createWebHistory(VITE_BASE_PATH),
     routes,
-})
+});
 
 app.use(router);
 
@@ -59,7 +64,7 @@ app.use(router);
 
 
 
-app.mount('#app')
+app.mount('#app');
 
 
 
