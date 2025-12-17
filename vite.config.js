@@ -14,7 +14,7 @@ export default defineConfig({
             '@': '/src'
         }
     },
-    base: '/my-primevue/',
+    base: '/portfolio_help/',
     build: {
         rollupOptions: {
             output: {
