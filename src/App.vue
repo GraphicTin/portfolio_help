@@ -4,19 +4,22 @@
         
         <div id="index" class="min-h-screen min-w-screen">
 			<KeepAlive>
-            <Index 
+            <LazyIndex 
 				@openhouse="scrollToRight()"
 				@guide    ="scrollToRight()"
 				@online   ="scrollToRight()"
 				@onsite   ="scrollToRight()"
 			>
-			</Index>	
+			</LazyIndex>	
 			</KeepAlive>
 
         </div>
         <div id="openhouse" class="min-h-screen min-w-screen">
+			<KeepAlive>
+            <LazyOpenhouse>
 
-            <Openhouse></Openhouse>
+			</LazyOpenhouse>
+			</KeepAlive>
 
         </div>
 		<div id="guide" class="min-h-screen min-w-screen">
@@ -30,11 +33,12 @@
 
 <script setup>
 
-	import Index     from '@/pages/Index.vue';
-	import Openhouse from '@/pages/Openhouse.vue';
+	// import Index     from '@/pages/Index.vue';
+	// import Openhouse from '@/pages/Openhouse.vue';
+	import { defineAsyncComponent } from 'vue';
 
-	const LazyIndex     = () => import('@/pages/Index.vue');
-	const LazyOpenhouse = () => import('@/pages/Openhouse.vue');
+	const LazyIndex     = defineAsyncComponent(() => import('@/pages/Index.vue'));
+	const LazyOpenhouse = defineAsyncComponent(() => import('@/pages/Openhouse.vue'));
 
 	// The script block needs to be a setup script or have a setup function
 	import { ref, onMounted, onUnmounted, KeepAlive } from 'vue';
@@ -43,19 +47,15 @@
 	const rootContainerRef = ref(null); 
 
 	import { useScroll } from '@vueuse/core';
-	const { x, scrollTo } = useScroll(
-		rootContainerRef, 
-		{ behavior: 'smooth' }
-	);
+	const { x, y } = useScroll(rootContainerRef);
 
 	const scrollToRight = () => {
 		if (rootContainerRef.value) {
-			
-			const screenWidth = rootContainerRef.value.offsetWidth; 
-
-			// CRITICAL FIX: Direct assignment to x.value scrolls the element.
-			// x.value is the current scroll position. We add the screenWidth to it.
-			x.value = x.value + screenWidth; 
+			// Use the native scrollTo for better reliability
+			rootContainerRef.value.scrollTo({
+				left: rootContainerRef.value.scrollLeft + window.innerWidth,
+				behavior: 'smooth'
+			});
 		}
 	};
 
@@ -69,7 +69,7 @@
 	);
 
 	onMounted(() => {
-		// lock(); // Uncomment if you want to lock user scrolling
+		// lock(); 
 	});
 
 	onUnmounted(() => {

@@ -1,9 +1,6 @@
 import { createApp } from 'vue'
 import './style.css'
 import App from './App.vue'
-import Index from "./pages/Index.vue";
-import John from "./John.vue";
-import Openhouse from './pages/Openhouse.vue';
 
 
 
