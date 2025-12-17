@@ -15,5 +15,21 @@ export default defineConfig({
         }
     },
     base: '/my-primevue/',
+    build: {
+        rollupOptions: {
+            output: {
+                manualChunks(id) {
+                    if (id.includes('node_modules')) {
+                        // Group specific heavy hitters
+                        if (id.includes('gsap')) return 'vendor-gsap';
+                        if (id.includes('primevue')) return 'vendor-ui';
+                        
+                        // Everything else in node_modules goes to a generic vendor chunk
+                        return 'vendor';
+                    }
+                }
+            }
+        }
+    }
 
 })
