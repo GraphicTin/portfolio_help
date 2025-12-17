@@ -8,45 +8,59 @@
 
 
 
-:root.my-app-dark {
-    --card-bg: var(--p-surface-900);
-}
+
+
+
 
 :root {
-    --card-bg: var(--p-surface-0);
-    --card-border: var(--p-surface-300);
-}
 
+    --app-bg: #ffffff;
 
-.card {
-
-    border: 1px solid var(--card-border);
-    border-radius: 1em;
-    padding: 2em;
-
-    background-color: var(--card-bg);
-    scroll-snap-align: center;
-    scroll-snap-type: y mandatory;
-}
-
-.interested {
-
-    /* Background: Light Orange 50 */
-    background-color: var(--p-interest-50); 
+    /* --- Primary Green for Branding/CTAs (Main Accent) --- */
+    --color-brand-primary: #10b981; /* Tailwind 'emerald-500' - Vibrant, strong green */
     
-    /* Border: Mid-tone Orange 500 */
-    border: 1px solid var(--p-interest-500);
+    /* --- Neutral/Background Greens (For light backgrounds or subtle accents) --- */
+    --color-green-light: #ecfdf5; /* Tailwind 'emerald-50' - Very light background */
+    --color-green-soft: #a7f3d0;  /* Tailwind 'emerald-200' - Soft hover/fill */
+
+    /* --- Dark Greens (For text, headers, or dark mode backgrounds) --- */
+    --color-green-dark: #064e3b;  /* Tailwind 'emerald-900' - Deep, readable text */
+    --color-green-darker: #042f2e; /* Even deeper, near-black for backgrounds */
     
-    /* Text: Darkest Orange 950 */
-    color: var(--p-interest-950); 
-    
-    border-radius: 1em;
-    padding: 1em;
+    /* --- Utility (Success/Alert) --- */
+    --color-success: var(--color-brand-primary); /* Often the same as primary for success messages */
+    --color-success-bg: var(--color-green-light);
 }
 
-* {
-    color: rgb(125, 125, 125);
+
+:root.my-app-dark {
+
+    --app-bg: #1a1c1e;
+
+    /* In dark mode, you might reverse the light/dark usage for background contrast */
+    --color-brand-primary: #34d399; /* Lighter shade for contrast */
+    --color-green-light: #064e3b;   /* Becomes a dark background */
+    --color-green-dark: #d1fae5;    /* Becomes light text */
+
 }
+
+
+#app {
+
+    background-color: var(--app-bg); 
+
+    transition: background-color 1s, color 1s;
+
+    min-height: 100dvh;
+    
+}
+
+.btn-primary {
+  background-color: var(--color-brand-primary);
+  color: white;
+  border-color: #042f2e;
+}
+
 
 
 /* #section2 {

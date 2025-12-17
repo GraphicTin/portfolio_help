@@ -14,6 +14,6 @@ export default defineConfig({
             '@': '/src'
         }
     },
-    // base: '/my-primevue/',
+    base: '/my-primevue/',
 
 })
